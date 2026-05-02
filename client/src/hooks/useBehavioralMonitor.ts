@@ -45,7 +45,8 @@ export const useBehavioralMonitor = (
   const [lastUpdate, setLastUpdate] = useState<BehavioralUpdate | null>(null);
   const [alerts, setAlerts] = useState<BehavioralAlert[]>([]);
   const wsRef = useRef<WebSocket | null>(null);
-  const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  // const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const reconnectTimeoutRef = useRef<number | null>(null);
 
   const connect = useCallback(() => {
     // @ts-ignore
