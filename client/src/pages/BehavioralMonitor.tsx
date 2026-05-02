@@ -38,7 +38,10 @@ const BehavioralMonitor: React.FC = () => {
   const [processes, setProcesses] = useState<Process[]>([]);
   const [loading, setLoading] = useState(true);
   const [tierFilter, setTierFilter] = useState<string | null>(null);
-  const [scanProgress, setScanProgress] = useState<ScanProgress | null>(null);
+  // const [scanProgress, setScanProgress] = useState<ScanProgress | null>(null);
+  const [, setScanProgress] = useState<ScanProgress | null>(null);
+  const [, setRecentAlerts] = useState<Process[]>([]);
+  
   const [recentAlerts, setRecentAlerts] = useState<Process[]>([]);
   const wsRef = useRef<WebSocket | null>(null);
 
