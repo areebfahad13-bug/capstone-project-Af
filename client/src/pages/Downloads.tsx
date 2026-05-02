@@ -27,7 +27,8 @@ export default function Downloads() {
   const [loading, setLoading] = useState(true);
   const [scanning, setScanning] = useState<Set<string>>(new Set());
   const [scanningAll, setScanningAll] = useState(false);
-  const [scanProgress, setScanProgress] = useState({ current: 0, total: 0 });
+  // const [scanProgress, setScanProgress] = useState({ current: 0, total: 0 });
+  const [, setScanProgress] = useState({ current: 0, total: 0 });
 
   useWebSocket((message) => {
     if (message.type === "file_detected") {
